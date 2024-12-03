@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sebastien's Study Tool</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Sebastien's Study Tool</h1>
+      <button class="settings-btn" onclick="window.location.href='settings/settings.html'">⚙️</button>
+    </header>
+     
+    <main>
+      <div class="timer">
+        <h2 id="timer-mode">Time to Focus!</h2>
+        <p id="timer-display">25:00</p>
+        <button id="start-btn">START</button>
+      </div>
+      
+      <section class="tasks">
+        <h3>Tasks</h3>
+        <ul id="task-list"></ul>
+        <div class="task-input-container">
+          <input type="text" id="task-input" placeholder="Add a new task">
+          <button id="add-task-btn">Add Task</button>
+        </div>
+      </section>
+    </main>
+    
+    <footer>
+      <p>Total Focus Time: <span id="total-time" class="total-time-display">0:00</span></p>
+    </footer>
+  </div>
+
+  <!-- Add audio element for sound notifications -->
+  <audio id="timer-sound" src="assets/Sound.mp3" preload="auto"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>

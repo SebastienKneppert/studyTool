@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Settings - Sebastien's Study Tool</title>
+  <link rel="stylesheet" href="../style.css">
+  <!-- Include Chart.js library for graphs -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <button class="back-btn">← Back</button>
+      <h1>Settings</h1>
+    </header>
+    
+    <main>
+      <!-- Settings Form Section -->
+      <section class="settings-section">
+        <h2>Customize Your Experience</h2>
+        <form>
+          <div class="form-group">
+            <label for="focus-time">Focus Time (minutes):</label>
+            <input type="number" id="focus-time" min="1" max="120" />
+          </div>
+
+          <div class="form-group">
+            <label for="break-time">Break Time (minutes):</label>
+            <input type="number" id="break-time" min="1" max="60" />
+          </div>
+
+          <div class="form-group">
+            <label for="theme">Theme:</label>
+            <select id="theme">
+              <option value="dark">Dark</option>
+              <option value="light">Light</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="background-color-study">Study Color:</label>
+            <select id="background-color-study">
+              <option value="#ff69b4">Bright Pink</option>
+              <option value="#ff0000">Red</option>
+              <option value="#0000ff">Blue</option>
+              <option value="#00ff00">Bright Green</option>
+              <option value="#ffff00">Yellow</option>
+              <option value="#808080">Grey</option>
+              <option value="#ffffff">White</option>
+              <option value="#000000">Black</option>
+              <option value="#ffa500">Orange</option>
+              <option value="#800080">Purple</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="background-color-break">Break Color:</label>
+            <select id="background-color-break">
+              <option value="#0000ff">Blue</option>
+              <option value="#ff69b4">Bright Pink</option>
+              <option value="#ff0000">Red</option>
+              <option value="#00ff00">Bright Green</option>
+              <option value="#ffff00">Yellow</option>
+              <option value="#808080">Grey</option>
+              <option value="#ffffff">White</option>
+              <option value="#000000">Black</option>
+              <option value="#ffa500">Orange</option>
+              <option value="#800080">Purple</option>
+            </select>
+          </div>
+
+          <button type="button" id="save-settings">Save Settings</button>
+        </form>
+      </section>
+
+      <!-- Session Statistics Section -->
+      <section id="stats-container">
+        <h2>Session Statistics</h2>
+        <div class="stats-grid">
+          <div class="stat-card">
+            <canvas id="focus-break-chart"></canvas>
+            <p>Focus vs Break Time</p>
+          </div>
+          <div class="stat-card">
+            <canvas id="sessions-per-day-chart"></canvas>
+            <p>Sessions Per Day</p>
+          </div>
+          <div class="stat-card">
+            <canvas id="focus-duration-chart"></canvas>
+            <p>Focus Duration Over Time</p>
+          </div>
+          <div class="stat-card">
+            <canvas id="break-duration-chart"></canvas>
+            <p>Break Duration Over Time</p>
+          </div>
+          <!-- Add more stat cards as needed -->
+        </div>
+      </section>
+
+      <!-- Session Logs Section -->
+      <section id="logs-container">
+        <h2>Session Logs</h2>
+        <table id="logs-table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Date</th>
+              <th>Time</th>
+              <th>Focus Duration</th>
+              <th>Break Duration</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Logs will be inserted here -->
+          </tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+
+  <script src="settings.js"></script>
+</body>
+</html>
